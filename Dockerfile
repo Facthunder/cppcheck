@@ -1,10 +1,10 @@
-FROM alpine:latest
+FROM alpine:3.9.3
 
 MAINTAINER begarco
 
 ENV CPPCHECK_VERSION=1.87
 
-RUN	apk add --no-cache -t .required_apks git make g++ pcre-dev && \
+RUN	apk add --no-cache -t .required_apks git make g++ pcre-dev python && \
 	mkdir -p /tmp/cppcheck /src && cd /tmp/cppcheck && \
 	git clone --single-branch https://github.com/danmar/cppcheck.git . && \
 	git checkout tags/$CPPCHECK_VERSION && \
