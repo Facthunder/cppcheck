@@ -13,13 +13,13 @@ docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck -v --xml --e
 #### Run MISRA C 2012 checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump . && misra.py *.dump"
+docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump . && misra.py *.dump 2> report.xml"
 ```
 
 #### Run CERT checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump . && cert.py *.dump"
+docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump . && cert.py *.dump 2> report.xml"
 ```
 
 ### How to contribute
@@ -31,10 +31,10 @@ If you want to do a PR, please put inside of it the reason of this pull request.
 
 Here is theVERs matrix of the image:
 
-|     TAG     | CPPCHECK VERSION |   BASE IMAGE   |
-|:-----------:|:----------------:|:--------------:|
-|    latest   |       1.87       |  alpine:3.9.3  |
-|     1.87    |       1.87       |  alpine:3.9.3  |
+|     TAG     | CPPCHECK VERSION |                     BASE IMAGE                    |
+|:-----------:|:----------------:|:-------------------------------------------------:|
+|    latest   |       1.87       |  [alpine:3.9.3](https://hub.docker.com/_/alpine)  |
+|     1.87    |       1.87       |  [alpine:3.9.3](https://hub.docker.com/_/alpine)  |
 
 ### License
 Copyright 2019 Facthunder.
