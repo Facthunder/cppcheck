@@ -31,10 +31,10 @@ If you want to do a PR, please put inside of it the reason of this pull request.
 
 Here is theVERs matrix of the image:
 
-|     TAG     | CPPCHECK VERSION |   BASE IMAGE    |
-|:-----------:|:----------------:|:---------------:|
-|    latest   |       1.87       |  alpine:latest  |
-|     1.87    |       1.87       |  alpine:latest  |
+|     TAG     | CPPCHECK VERSION |   BASE IMAGE   |
+|:-----------:|:----------------:|:--------------:|
+|    latest   |       1.87       |  alpine:3.9.3  |
+|     1.87    |       1.87       |  alpine:3.9.3  |
 
 ### License
 Copyright 2019 Facthunder.
