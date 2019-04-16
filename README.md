@@ -15,6 +15,10 @@ Assuming current directory contains the source code to analyze, simply run the f
 ```Dockerfile
 docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump .; misra.py *.dump 2>report.xml"
 ```
+Or simplier:
+```Dockerfile
+docker run --rm -v ${PWD}:/src facthunder/cppcheck misra
+```
 
 #### Run CERT checks
 Assuming current directory contains the source code to analyze, simply run the following command:
@@ -25,10 +29,10 @@ docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump .; ce
 ### Versions matrix
 Here is theVERs matrix of the image:
 
-|     TAG     | CPPCHECK VERSION |                     BASE IMAGE                    |
-|:-----------:|:----------------:|:-------------------------------------------------:|
-|    latest   |       1.87       |  [alpine:3.9.3](https://hub.docker.com/_/alpine)  |
-|     1.87    |       1.87       |  [alpine:3.9.3](https://hub.docker.com/_/alpine)  |
+|     TAG     | CPPCHECK VERSION |                     BASE IMAGE                     |
+|:-----------:|:----------------:|:--------------------------------------------------:|
+|    latest   |       1.87       |  [python:alpine](https://hub.docker.com/_/python)  |
+|     1.87    |       1.87       |  [python:alpine](https://hub.docker.com/_/python)  |
 
 ### How to contribute
 If you experienced a problem with the plugin please open an issue. Inside this issue please explain us how to reproduce this issue and paste the log.
