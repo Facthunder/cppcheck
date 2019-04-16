@@ -27,7 +27,7 @@ docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump .; ce
 ```
 
 ### Versions matrix
-Here is theVERs matrix of the image:
+Here is the versions matrix of the image:
 
 |     TAG     | CPPCHECK VERSION |                     BASE IMAGE                     |
 |:-----------:|:----------------:|:--------------------------------------------------:|
