@@ -12,7 +12,7 @@ RUN	apk add --no-cache -t .required_apks git make g++ pcre-dev && \
 	apk del .required_apks && \
 	mkdir -p /src && \
 	rm -rf /tmp/cppcheck && \
-	echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\`" > /usr/bin/misra && chmod +x /usr/bin/misra
+	echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
 
 WORKDIR /src
 
