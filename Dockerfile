@@ -12,8 +12,9 @@ RUN	apk add --no-cache -t .required_apks git=2.20.1-r0 make=4.2.1-r2 g++=8.3.0-r
     echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
 
 FROM python:3.7.3-alpine
+RUN pip install pygments
 RUN rm -rf /lib/apk /etc/apk /home /var /tmp /srv /media /mnt /run /sbin /opt
-COPY --from=base /usr/bin/cppcheck /usr/bin/misra /usr/bin/*.py /usr/bin/
+COPY --from=base /usr/bin/cppcheck /usr/bin/cppcheck-htmlreport /usr/bin/misra /usr/bin/*.py /usr/bin/
 COPY --from=base /etc/cppcheck /etc/cppcheck
 
 LABEL maintainer="begarco"
