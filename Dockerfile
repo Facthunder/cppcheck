@@ -4,7 +4,7 @@ ENV CPPCHECK_VERSION=1.87
 
 WORKDIR /tmp/cppcheck
 
-RUN	apk add --no-cache -t .required_apks git=2.20.1-r0 make=4.2.1-r2 g++=8.3.0-r0 pcre-dev=8.42-r1 && \
+RUN apk add --no-cache -t .required_apks git=2.20.1-r0 make=4.2.1-r2 g++=8.3.0-r0 pcre-dev=8.42-r1 && \
     git clone --single-branch https://github.com/danmar/cppcheck.git . && \
     git checkout tags/$CPPCHECK_VERSION && \
     make install CFGDIR=/etc/cppcheck/cfg HAVE_RULES=yes CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function --static" && \
