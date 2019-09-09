@@ -31,7 +31,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-| [latest](https://hub.docker.com/r/facthunder/cppcheck) | [1.88](https://github.com/danmar/cppcheck/releases/tag/1.88) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
+| [latest](https://hub.docker.com/r/facthunder/cppcheck) | [1.89](https://github.com/danmar/cppcheck/releases/tag/1.89) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
+|  [1.89](https://hub.docker.com/r/facthunder/cppcheck)  | [1.89](https://github.com/danmar/cppcheck/releases/tag/1.89) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
 |  [1.88](https://hub.docker.com/r/facthunder/cppcheck)  | [1.88](https://github.com/danmar/cppcheck/releases/tag/1.88) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
 |  [1.87](https://hub.docker.com/r/facthunder/cppcheck)  | [1.87](https://github.com/danmar/cppcheck/releases/tag/1.87) | [python:3.7.3-alpine](https://hub.docker.com/_/python) |
 
