@@ -31,7 +31,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-| [latest](https://hub.docker.com/r/facthunder/cppcheck) | [1.89](https://github.com/danmar/cppcheck/releases/tag/1.89) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
+| [latest](https://hub.docker.com/r/facthunder/cppcheck) | [1.90](https://github.com/danmar/cppcheck/releases/tag/1.90) | [python:3.8.1-alpine](https://hub.docker.com/_/python) |
+|  [1.90](https://hub.docker.com/r/facthunder/cppcheck)  | [1.90](https://github.com/danmar/cppcheck/releases/tag/1.90) | [python:3.8.1-alpine](https://hub.docker.com/_/python) |
 |  [1.89](https://hub.docker.com/r/facthunder/cppcheck)  | [1.89](https://github.com/danmar/cppcheck/releases/tag/1.89) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
 |  [1.88](https://hub.docker.com/r/facthunder/cppcheck)  | [1.88](https://github.com/danmar/cppcheck/releases/tag/1.88) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
 |  [1.87](https://hub.docker.com/r/facthunder/cppcheck)  | [1.87](https://github.com/danmar/cppcheck/releases/tag/1.87) | [python:3.7.3-alpine](https://hub.docker.com/_/python) |
@@ -42,6 +43,6 @@ If you experienced a problem with the plugin please open an issue. Inside this i
 If you want to do a PR, please put inside of it the reason of this pull request. If this pull request fix an issue please insert the number of the issue or explain inside of the PR how to reproduce this issue.
 
 ### License
-Copyright 2019 Facthunder.
+Copyright 2020 Facthunder.
 
 Licensed under the [GNU General Public License, Version 3.0](https://www.gnu.org/licenses/gpl.txt)
