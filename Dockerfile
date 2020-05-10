@@ -1,6 +1,6 @@
-FROM python:3.8.1-alpine AS base
+FROM python:3.8.2-alpine AS base
 
-ENV CPPCHECK_VERSION=1.90
+ENV CPPCHECK_VERSION=2.0
 
 WORKDIR /tmp/cppcheck
 
@@ -11,7 +11,7 @@ RUN apk add --no-cache -t .required_apks \
     pcre-dev=8.43-r0 && \
     git clone --single-branch https://github.com/danmar/cppcheck.git . && \
     git checkout tags/$CPPCHECK_VERSION && \
-    make install MATCHCOMPILER=yes FILESDIR=/etc/cppcheck HAVE_RULES=yes CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function --static" && \
+    make install MATCHCOMPILER=yes FILESDIR=/etc/cppcheck HAVE_RULES=yes USE_Z3=yes CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function --static" && \
     apk del .required_apks && \
     echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
 
