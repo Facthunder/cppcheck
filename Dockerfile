@@ -5,7 +5,7 @@ ENV CPPCHECK_VERSION=2.0
 WORKDIR /tmp/cppcheck
 
 RUN apt-get update -y \
- && apt-get install -y \
+ && apt-get install -y --no-install-recommends \
     git \
     make \
     g++ \
@@ -20,7 +20,7 @@ RUN apt-get update -y \
 FROM python:3.8.5-slim-buster
 RUN pip install --trusted-host pypi.org pygments \
  && apt-get update -y \
- && apt-get install -y \
+ && apt-get install -y --no-install-recommends \
     z3 \
     libz3-dev \
  && rm -rf /var/lib/apt/lists/* \
