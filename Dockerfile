@@ -1,24 +1,30 @@
-FROM python:3.8.2-alpine AS base
+FROM python:3.8.5-slim-buster AS base
 
 ENV CPPCHECK_VERSION=2.0
 
 WORKDIR /tmp/cppcheck
 
-RUN apk add --no-cache -t .required_apks \
-    git=2.24.3-r0 \
-    make=4.2.1-r2 \
+RUN apt-get update -y \
+ && apt-get install -y \
+    git \
+    make \
     g++ \
-    z3-dev=4.8.7-r0 \
-    pcre-dev=8.43-r0 && \
-    git clone --single-branch https://github.com/danmar/cppcheck.git . && \
-    git checkout tags/$CPPCHECK_VERSION && \
-    make install MATCHCOMPILER=yes FILESDIR=/etc/cppcheck HAVE_RULES=yes CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function --static" && \
-    apk del .required_apks && \
-    echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
+    z3 \
+    libz3-dev \
+    libpcre3-dev \
+ && git clone --single-branch https://github.com/danmar/cppcheck.git . \
+ && git checkout tags/$CPPCHECK_VERSION \
+ && make install -j32 USE_Z3=yes HAVE_RULES=yes MATCHCOMPILER=yes FILESDIR=/etc/cppcheck CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function" \
+ && echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
 
-FROM python:3.8.2-alpine
-RUN pip install pygments && \
-    rm -rf /lib/apk /etc/apk /home /var /tmp /srv /media /mnt /run /sbin /opt
+FROM python:3.8.5-slim-buster
+RUN pip install --trusted-host pypi.org pygments \
+ && apt-get update -y \
+ && apt-get install -y \
+    z3 \
+    libz3-dev \
+ && rm -rf /var/lib/apt/lists/* \
+ && rm -rf /lib/apk /etc/apk /home /var /tmp /srv /media /mnt /run /sbin /opt
 COPY --from=base /usr/bin/cppcheck /usr/bin/cppcheck-htmlreport /usr/bin/misra /usr/bin/*.py /usr/bin/
 COPY --from=base /etc/cppcheck /etc/cppcheck
 

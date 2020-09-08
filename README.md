@@ -31,8 +31,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-| [latest](https://hub.docker.com/r/facthunder/cppcheck) | [2.0](https://github.com/danmar/cppcheck/releases/tag/2.0) | [python:3.8.2-alpine](https://hub.docker.com/_/python) |
-| [2.0](https://hub.docker.com/r/facthunder/cppcheck) | [2.0](https://github.com/danmar/cppcheck/releases/tag/2.0) | [python:3.8.2-alpine](https://hub.docker.com/_/python) |
+| [latest](https://hub.docker.com/r/facthunder/cppcheck) |  [2.0](https://github.com/danmar/cppcheck/releases/tag/2.0)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+|  [2.0](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.0](https://github.com/danmar/cppcheck/releases/tag/2.0)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [1.90](https://hub.docker.com/r/facthunder/cppcheck)  | [1.90](https://github.com/danmar/cppcheck/releases/tag/1.90) | [python:3.8.1-alpine](https://hub.docker.com/_/python) |
 |  [1.89](https://hub.docker.com/r/facthunder/cppcheck)  | [1.89](https://github.com/danmar/cppcheck/releases/tag/1.89) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
 |  [1.88](https://hub.docker.com/r/facthunder/cppcheck)  | [1.88](https://github.com/danmar/cppcheck/releases/tag/1.88) | [python:3.7.4-alpine](https://hub.docker.com/_/python) |
