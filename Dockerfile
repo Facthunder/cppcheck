@@ -14,7 +14,7 @@ RUN apt-get update -y \
     libpcre3-dev \
  && git clone --single-branch https://github.com/danmar/cppcheck.git . \
  && git checkout tags/$CPPCHECK_VERSION \
- && make install -j32 USE_Z3=yes HAVE_RULES=yes MATCHCOMPILER=yes FILESDIR=/etc/cppcheck CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function" \
+ && make install USE_Z3=yes HAVE_RULES=yes MATCHCOMPILER=yes FILESDIR=/etc/cppcheck CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function" \
  && echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
 
 FROM python:3.8.5-slim-buster
