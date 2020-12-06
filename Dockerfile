@@ -31,5 +31,3 @@ COPY --from=base /etc/cppcheck /etc/cppcheck
 
 LABEL maintainer="begarco"
 WORKDIR /src
-
-ENTRYPOINT ["sh", "-c"]
