@@ -7,13 +7,13 @@ This project aims to provide a simple Docker image to encapsulate and run a [Cpp
 #### Run core checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck -v --xml --enable=all . 2> report.xml"
+docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest cppcheck -v --xml --enable=all . 2> report.xml
 ```
 
 #### Run MISRA C 2012 checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump .; misra.py *.dump 2>report.xml"
+docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest cppcheck --dump .; misra.py *.dump 2>report.xml
 ```
 Or simplier:
 ```Dockerfile
@@ -23,7 +23,7 @@ docker run --rm -v ${PWD}:/src facthunder/cppcheck misra
 #### Run CERT checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest "cppcheck --dump .; cert.py *.dump 2>report.xml"
+docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest cppcheck --dump .; cert.py *.dump 2>report.xml
 ```
 
 ### Versions matrix
