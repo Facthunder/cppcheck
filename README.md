@@ -31,7 +31,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-| [latest](https://hub.docker.com/r/facthunder/cppcheck) |  [2.4](https://github.com/danmar/cppcheck/releases/tag/2.4)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+| [latest](https://hub.docker.com/r/facthunder/cppcheck) |[2.4.1](https://github.com/danmar/cppcheck/releases/tag/2.4.1)| [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+|  [2.4.1](https://hub.docker.com/r/facthunder/cppcheck) |[2.4.1](https://github.com/danmar/cppcheck/releases/tag/2.4.1)| [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.4](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.4](https://github.com/danmar/cppcheck/releases/tag/2.4)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.3](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.3](https://github.com/danmar/cppcheck/releases/tag/2.3)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.2](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.2](https://github.com/danmar/cppcheck/releases/tag/2.2)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
@@ -48,6 +49,6 @@ If you experienced a problem with the plugin please open an issue. Inside this i
 If you want to do a PR, please put inside of it the reason of this pull request. If this pull request fix an issue please insert the number of the issue or explain inside of the PR how to reproduce this issue.
 
 ### License
-Copyright 2020 Facthunder.
+Copyright 2021 Facthunder.
 
 Licensed under the [GNU General Public License, Version 3.0](https://www.gnu.org/licenses/gpl.txt)
