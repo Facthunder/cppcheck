@@ -31,8 +31,9 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-| [latest](https://hub.docker.com/r/facthunder/cppcheck) |  [2.3](https://github.com/danmar/cppcheck/releases/tag/2.3)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
-| [2.3](https://hub.docker.com/r/facthunder/cppcheck)    |  [2.3](https://github.com/danmar/cppcheck/releases/tag/2.3)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+| [latest](https://hub.docker.com/r/facthunder/cppcheck) |  [2.4](https://github.com/danmar/cppcheck/releases/tag/2.4)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+|  [2.4](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.4](https://github.com/danmar/cppcheck/releases/tag/2.4)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+|  [2.3](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.3](https://github.com/danmar/cppcheck/releases/tag/2.3)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.2](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.2](https://github.com/danmar/cppcheck/releases/tag/2.2)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.1](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.1](https://github.com/danmar/cppcheck/releases/tag/2.1)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.0](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.0](https://github.com/danmar/cppcheck/releases/tag/2.0)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
