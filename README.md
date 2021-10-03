@@ -4,26 +4,32 @@ This project aims to provide a simple Docker image to encapsulate and run a [Cpp
 
 ### Run Cppcheck
 
+#### Get latest image
+Images are now hosted directly on GitHub:
+```Dockerfile
+docker pull ghcr.io/facthunder/cppcheck:latest
+```
+
 #### Run core checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest cppcheck -v --xml --enable=all . 2> report.xml
+docker run --rm -v ${PWD}:/src ghcr.io/facthunder/cppcheck:latest cppcheck -v --xml --enable=all . 2> report.xml
 ```
 
 #### Run MISRA C 2012 checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest cppcheck --dump .; misra.py *.dump 2>report.xml
+docker run --rm -v ${PWD}:/src ghcr.io/facthunder/cppcheck:latest cppcheck --dump .; misra.py *.dump 2>report.xml
 ```
 Or simplier:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck misra
+docker run --rm -v ${PWD}:/src ghcr.io/facthunder/cppcheck misra
 ```
 
 #### Run CERT checks
 Assuming current directory contains the source code to analyze, simply run the following command:
 ```Dockerfile
-docker run --rm -v ${PWD}:/src facthunder/cppcheck:latest cppcheck --dump .; cert.py *.dump 2>report.xml
+docker run --rm -v ${PWD}:/src ghcr.io/facthunder/cppcheck:latest cppcheck --dump .; cert.py *.dump 2>report.xml
 ```
 
 ### Versions matrix
@@ -31,7 +37,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-| [latest](https://hub.docker.com/r/facthunder/cppcheck) |[2.4.1](https://github.com/danmar/cppcheck/releases/tag/2.4.1)| [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+| [latest](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.5) |  [2.5](https://github.com/danmar/cppcheck/releases/tag/2.6)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
+|  [2.5](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.5)   |  [2.5](https://github.com/danmar/cppcheck/releases/tag/2.5)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.4.1](https://hub.docker.com/r/facthunder/cppcheck) |[2.4.1](https://github.com/danmar/cppcheck/releases/tag/2.4.1)| [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.4](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.4](https://github.com/danmar/cppcheck/releases/tag/2.4)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.3](https://hub.docker.com/r/facthunder/cppcheck)   |  [2.3](https://github.com/danmar/cppcheck/releases/tag/2.3)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
