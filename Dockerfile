@@ -1,6 +1,6 @@
 FROM python:3.8.5-slim-buster AS base
 
-ENV CPPCHECK_VERSION=2.7
+ENV CPPCHECK_VERSION=2.8
 
 WORKDIR /tmp/cppcheck
 
