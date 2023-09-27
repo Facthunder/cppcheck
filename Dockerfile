@@ -1,6 +1,6 @@
-FROM python:3.8.5-slim-buster AS base
+FROM python:3.11.5-slim-bookworm AS base
 
-ENV CPPCHECK_VERSION=2.7
+ENV CPPCHECK_VERSION=2.12.1
 
 WORKDIR /tmp/cppcheck
 
@@ -13,11 +13,10 @@ RUN apt-get update -y \
     libz3-dev \
     libpcre3-dev \
  && git clone --single-branch -b $CPPCHECK_VERSION https://github.com/danmar/cppcheck.git . \
- && cp externals/z3_version_old.h externals/z3_version.h \
  && make install USE_Z3=yes HAVE_RULES=yes MATCHCOMPILER=yes FILESDIR=/etc/cppcheck CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function" \
  && echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
 
-FROM python:3.8.5-slim-buster
+FROM python:3.11.5-slim-bookworm
 RUN pip install --trusted-host pypi.org pygments \
  && apt-get update -y \
  && apt-get install -y --no-install-recommends \
