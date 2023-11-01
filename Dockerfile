@@ -22,6 +22,7 @@ RUN pip install --trusted-host pypi.org pygments \
  && apt-get install -y --no-install-recommends \
     z3 \
     libz3-dev \
+    libpcre3-dev \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /lib/apk /etc/apk /home /var /tmp /srv /media /mnt /run /sbin /opt
 COPY --from=base /usr/bin/cppcheck /usr/bin/cppcheck-htmlreport /usr/bin/misra /usr/bin/*.py /usr/bin/
