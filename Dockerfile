@@ -1,6 +1,6 @@
-FROM python:3.11.5-slim-bookworm AS base
+FROM python:3.13.0-slim-bookworm AS base
 
-ENV CPPCHECK_VERSION=2.12.1
+ENV CPPCHECK_VERSION=2.14.2
 
 WORKDIR /tmp/cppcheck
 
@@ -16,7 +16,7 @@ RUN apt-get update -y \
  && make install USE_Z3=yes HAVE_RULES=yes MATCHCOMPILER=yes FILESDIR=/etc/cppcheck CXXFLAGS="-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function" \
  && echo -e "#!/bin/sh\ncppcheck --dump .\n misra.py \`find . -name '*.dump' | tr '\n' ' '\` 2> misra-report.txt" > /usr/bin/misra && chmod +x /usr/bin/misra
 
-FROM python:3.11.5-slim-bookworm
+FROM python:3.13.0-slim-bookworm
 RUN pip install --trusted-host pypi.org pygments \
  && apt-get update -y \
  && apt-get install -y --no-install-recommends \

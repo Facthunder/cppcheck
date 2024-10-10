@@ -37,7 +37,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-| [latest](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.12.1) |  [2.12.1](https://github.com/danmar/cppcheck/releases/tag/2.12.1)  | [python:3.11.5-slim-bookworm](https://hub.docker.com/_/python) |
+|  [latest](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.14.2)   |  [2.14.2](https://github.com/danmar/cppcheck/releases/tag/2.14.2)  | [python:3.13.0-slim-bookworm](https://hub.docker.com/_/python) |
+|  [2.14.2](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.14.2)   |  [2.14.2](https://github.com/danmar/cppcheck/releases/tag/2.14.2)  | [python:3.13.0-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.12.1](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.12.1)   |  [2.12.1](https://github.com/danmar/cppcheck/releases/tag/2.12.1)  | [python:3.11.5-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.7](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.7)   |  [2.7](https://github.com/danmar/cppcheck/releases/tag/2.7)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
 |  [2.6](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.6)   |  [2.6](https://github.com/danmar/cppcheck/releases/tag/2.6)  | [python:3.8.5-slim-buster](https://hub.docker.com/_/python) |
@@ -59,6 +60,6 @@ If you experienced a problem with the plugin please open an issue. Inside this i
 If you want to do a PR, please put inside of it the reason of this pull request. If this pull request fix an issue please insert the number of the issue or explain inside of the PR how to reproduce this issue.
 
 ### License
-Copyright 2021 Facthunder.
+Copyright 2024 Facthunder.
 
 Licensed under the [GNU General Public License, Version 3.0](https://www.gnu.org/licenses/gpl.txt)
