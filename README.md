@@ -37,7 +37,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-|  [latest](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.15.0)   |  [2.15.0](https://github.com/danmar/cppcheck/releases/tag/2.15.0)  | [python:3.13.0-slim-bookworm](https://hub.docker.com/_/python) |
+|  [latest](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.16.0)   |  [2.16.0](https://github.com/danmar/cppcheck/releases/tag/2.16.0)  | [python:3.13.0-slim-bookworm](https://hub.docker.com/_/python) |
+|  [2.16.0](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.16.0)   |  [2.16.0](https://github.com/danmar/cppcheck/releases/tag/2.16.0)  | [python:3.13.0-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.15.0](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.15.0)   |  [2.15.0](https://github.com/danmar/cppcheck/releases/tag/2.15.0)  | [python:3.13.0-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.14.2](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.14.2)   |  [2.14.2](https://github.com/danmar/cppcheck/releases/tag/2.14.2)  | [python:3.13.0-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.12.1](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.12.1)   |  [2.12.1](https://github.com/danmar/cppcheck/releases/tag/2.12.1)  | [python:3.11.5-slim-bookworm](https://hub.docker.com/_/python) |
