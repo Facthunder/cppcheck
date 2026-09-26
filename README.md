@@ -34,7 +34,8 @@ Here is the versions matrix of the image:
 
 |                          TAG                           |                       CPPCHECK VERSION                       |                        BASE IMAGE                      |
 |:------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------:|
-|  [latest](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.18.0)   |  [2.18.0](https://github.com/cppcheck-opensource/cppcheck/releases/tag/2.18.0)  | [python:3.14.7-slim-bookworm](https://hub.docker.com/_/python) |
+|  [latest](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.19.0)   |  [2.19.0](https://github.com/cppcheck-opensource/cppcheck/releases/tag/2.19.0)  | [python:3.14.7-slim-bookworm](https://hub.docker.com/_/python) |
+|  [2.19.0](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.19.0)   |  [2.19.0](https://github.com/cppcheck-opensource/cppcheck/releases/tag/2.19.0)  | [python:3.14.7-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.18.0](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.18.0)   |  [2.18.0](https://github.com/cppcheck-opensource/cppcheck/releases/tag/2.18.0)  | [python:3.14.7-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.17.1](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.17.1)   |  [2.17.1](https://github.com/cppcheck-opensource/cppcheck/releases/tag/2.17.1)  | [python:3.14.7-slim-bookworm](https://hub.docker.com/_/python) |
 |  [2.17.0](https://github.com/facthunder/cppcheck/pkgs/container/cppcheck/2.17.0)   |  [2.17.0](https://github.com/cppcheck-opensource/cppcheck/releases/tag/2.17.0)  | [python:3.14.7-slim-bookworm](https://hub.docker.com/_/python) |
