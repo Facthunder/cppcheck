@@ -1,6 +1,6 @@
 FROM python:3.14.7-slim-bookworm AS base
 
-ENV CPPCHECK_VERSION=2.21.0
+ENV CPPCHECK_VERSION=2.22.0
 
 WORKDIR /tmp/cppcheck
 
